@@ -4,7 +4,7 @@ function NewButton() {
   return  (
     <div>
         <Link to="/notes/new">
-            +New
+            <button>+New</button>
         </Link>
 
     </div>
