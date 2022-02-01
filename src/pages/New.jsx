@@ -19,6 +19,7 @@ function New(props) {
 			content: '',
 		})
 	}
+	console.log(props.notes)
 	return (
 		<section>
 			<form onSubmit={handleSubmit}>

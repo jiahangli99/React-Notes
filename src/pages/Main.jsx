@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+import NoteCard from '../components/NoteCard'
+
 import New from './New'
 
 function Main() {
-	const [notes, setNotes] = useState(null)
+	const [notes, setNotes] = useState([])
 
 	const URL = 'https://express-notes-data.herokuapp.com/notes'
 
@@ -48,12 +50,14 @@ function Main() {
 	}
 
 	useEffect(() => getNotes(), [])
-
 	return (
 		<main>
 			<Switch>
-				<Route exact path='/notes/new'>
+				<Route path='/new'>
 					<New notes={notes} createNote={createNote} />
+				</Route>
+				<Route exact path='/'>
+					<NoteCard notes={notes} />
 				</Route>
 			</Switch>
 		</main>
