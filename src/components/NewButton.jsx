@@ -4,7 +4,7 @@ function NewButton() {
 
 	return (
 		<div>
-			<Link to='/notes/new'>+New</Link>
+			<Link to='/new'>+New</Link>
 		</div>
 	)
 
