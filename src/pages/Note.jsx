@@ -1,40 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 function Show(props) {
 	const id = props.match.params.id
-	const notes = props.notes
-	console.log(notes)
-	let note = notes.find((p) => p._id === id)
-	if (!note) {
-		props.getNotes()
-		note = notes.find((p) => p._id === id)
-	}
-	console.log(note)
 	const [noteDisplay, setNoteDisplay] = useState({
-		title: `${note.title}`,
-		content: `${note.content}`,
+		title: ``,
+		content: ``,
 	})
 
+	// FUNCTIONS
+
+	const getByID = async () => {
+		const URL = 'https://express-notes-data.herokuapp.com/notes/' + id
+		const response = await fetch(URL)
+		const data = await response.json()
+		setNoteDisplay(data)
+	}
 	const handleChange = (event) => {
 		setNoteDisplay({ ...noteDisplay, [event.target.name]: event.target.value })
 	}
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		props.updateNote(noteDisplay, note._id)
+		props.updateNote(noteDisplay)
 		props.history.push('/')
 	}
+
+	useEffect(() => getByID(), [])
+
+	// JSX
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
 				<input
 					type='text'
-					value={noteDisplay.title}
+					value={noteDisplay?.title}
 					name='title'
 					onChange={handleChange}
 				/>
 				<input
 					type='text'
-					value={noteDisplay.content}
+					value={noteDisplay?.content}
 					name='content'
 					onChange={handleChange}
 				/>
