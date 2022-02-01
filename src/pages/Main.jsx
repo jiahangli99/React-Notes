@@ -4,11 +4,12 @@ import { Route, Switch } from 'react-router-dom'
 import NoteCard from '../components/NoteCard'
 
 import New from './New'
+import Show from './Note'
 
 function Main() {
 	const [notes, setNotes] = useState([])
 
-	const URL = 'https://express-notes-data.herokuapp.com/notes'
+	const URL = 'https://express-notes-data.herokuapp.com/notes/'
 
 	const getNotes = async () => {
 		const response = await fetch(URL)
@@ -57,8 +58,9 @@ function Main() {
 					<New notes={notes} createNote={createNote} />
 				</Route>
 				<Route exact path='/'>
-					<NoteCard notes={notes} />
+					<NoteCard notes={notes} deleteNote={deleteNote} />
 				</Route>
+				<Route path='/:id' render={(rp) => <Show notes={notes} {...rp} />} />
 			</Switch>
 		</main>
 	)

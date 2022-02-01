@@ -1,5 +1,6 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import Delete from './DeleteButton'
 
 function NoteCard(props) {
 	return (
@@ -9,6 +10,7 @@ function NoteCard(props) {
 					<Link to={`/${note._id}`}>
 						<h3>{note.title}</h3>
 					</Link>
+					<Delete deleteNote={props.deleteNote} note={note} />
 				</div>
 			))}
 		</>
