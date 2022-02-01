@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 function New(props) {
 	const [note, setNote] = useState({
@@ -19,7 +18,6 @@ function New(props) {
 			content: '',
 		})
 	}
-	console.log(props.notes)
 	return (
 		<section>
 			<form onSubmit={handleSubmit}>

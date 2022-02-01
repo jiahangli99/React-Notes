@@ -60,7 +60,17 @@ function Main() {
 				<Route exact path='/'>
 					<NoteCard notes={notes} deleteNote={deleteNote} />
 				</Route>
-				<Route path='/:id' render={(rp) => <Show notes={notes} {...rp} />} />
+				<Route
+					path='/:id'
+					render={(rp) => (
+						<Show
+							notes={notes}
+							getNotes={getNotes}
+							updateNote={updateNotes}
+							{...rp}
+						/>
+					)}
+				/>
 			</Switch>
 		</main>
 	)
