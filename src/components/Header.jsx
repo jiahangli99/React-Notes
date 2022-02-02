@@ -3,8 +3,8 @@ import NewButton from './NewButton'
 
 function Header() {
   return (
-  <div>
-      
+  <div className="Header">
+      <h1>Reactive Chat</h1>
     <NewButton />  
   </div>
   )
