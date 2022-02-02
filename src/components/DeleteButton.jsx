@@ -5,7 +5,7 @@ function Delete(props) {
 	return (
 		<div>
 			<button id='delete' onClick={removeNote}>
-				DELETE
+				X
 			</button>
 		</div>
 	)
