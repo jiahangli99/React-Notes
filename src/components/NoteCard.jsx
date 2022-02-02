@@ -8,7 +8,7 @@ function NoteCard(props) {
 			{props.notes.map((note, i) => (
 				<div key={i} className='NoteCard'>
 					<Delete deleteNote={props.deleteNote} note={note} />
-					<Link to={`/${note._id}`} style={{ textDecoration: 'none' }}>
+					<Link to={`/${note._id}`} style={{ textDecoration: 'none', textAlign: "center", color: "black"}}>
 						<h3>{note.title}</h3>
 					</Link>
 				</div>
