@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+import NoteCard from '../components/NoteCard'
+
 import New from './New'
+import Show from './Note'
 
 function Main() {
-	const [notes, setNotes] = useState(null)
+	const [notes, setNotes] = useState([])
 
-	const URL = 'https://express-notes-data.herokuapp.com/notes'
+	const URL = 'https://express-notes-data.herokuapp.com/notes/'
 
 	const getNotes = async () => {
 		const response = await fetch(URL)
@@ -48,13 +51,26 @@ function Main() {
 	}
 
 	useEffect(() => getNotes(), [])
-
 	return (
 		<main>
 			<Switch>
-				<Route exact path='/notes/new'>
+				<Route path='/new'>
 					<New notes={notes} createNote={createNote} />
 				</Route>
+				<Route exact path='/'>
+					<NoteCard notes={notes} deleteNote={deleteNote} />
+				</Route>
+				<Route
+					path='/:id'
+					render={(rp) => (
+						<Show
+							notes={notes}
+							getNotes={getNotes}
+							updateNote={updateNotes}
+							{...rp}
+						/>
+					)}
+				/>
 			</Switch>
 		</main>
 	)

@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 function NewButton() {
 
 	return (
-        <Link to='/notes/new'>
+
+        <Link to='/new'>
 		<div className='Button'>
 			+New
+
 		</div>
         </Link>
 	)
