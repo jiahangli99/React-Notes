@@ -1,17 +1,13 @@
 import { Link } from 'react-router-dom'
 
 function NewButton() {
-
 	return (
-
-        <Link to='/new'>
 		<div className='Button'>
-			+New
-
+			<Link to='/notes/new' style={{ textDecoration: 'none' }}>
+				<button>+New</button>
+			</Link>
 		</div>
-        </Link>
 	)
-
 }
 
 export default NewButton
