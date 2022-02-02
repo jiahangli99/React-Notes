@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom'
 function NewButton() {
 
 	return (
-		<div>
-			<Link to='/new'>+New</Link>
+
+        <Link to='/new'>
+		<div className='Button'>
+			+New
+
 		</div>
+        </Link>
 	)
 
 }
