@@ -4,7 +4,7 @@ function Sidebar() {
   return (
   <div className="Sidebar">
       
-      <Link to="/notes/about">
+      <Link to="/notes/about" style={{ textDecoration: 'none' }}>
           About
       </Link>
   </div>
