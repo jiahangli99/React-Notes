@@ -11,7 +11,7 @@
 
 .Sidebar {
 	grid-area: 1 / 1 / 7 / 2;
-	background-color: blue;
+	background-color: #FB8464;
 	display: flex;
 	flex-direction: column-reverse;
 	min-height: 100vh;
@@ -21,7 +21,7 @@
 
 .Header {
 	grid-area: 1 / 2 / 2 / 7;
-	background-color: green;
+	background-color: #FB8464;
 	max-height: 15vh;
 }
 
@@ -50,4 +50,5 @@
 	box-shadow: 21px 15px 21px 2px rgba(0, 0, 0, 0.3);
 	margin: 5%;
 	margin-left: 10px;
+	background-color: #E0E2DB;
 }
