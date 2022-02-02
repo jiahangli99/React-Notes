@@ -54,12 +54,13 @@ function Main() {
 	return (
 		<main>
 			<Switch>
-				<Route path='/new'>
-					<New notes={notes} createNote={createNote} />
-				</Route>
 				<Route exact path='/'>
 					<NoteCard notes={notes} deleteNote={deleteNote} />
 				</Route>
+				<Route path='/new'>
+					<New notes={notes} createNote={createNote} />
+				</Route>
+
 				<Route
 					path='/:id'
 					render={(rp) => (
