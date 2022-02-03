@@ -1,0 +1,42 @@
+#about,
+#contacts,
+#contact,
+#technologies {
+	display: flex;
+}
+
+#about {
+	width: 100%;
+	align-items: center;
+	flex-flow: column;
+}
+
+#contact {
+	flex-flow: column;
+	margin: 10px;
+	height: fit-content;
+}
+
+#contact > a {
+	flex-direction: column;
+}
+
+#contact > a > img {
+	width: 100px;
+	border-radius: 50%;
+	border: 5px solid black;
+}
+
+.name {
+	text-align: center;
+}
+
+/* Technology */
+
+#technologies {
+	list-style-type: none;
+}
+
+#technologies > li > img {
+	width: 50px;
+}
