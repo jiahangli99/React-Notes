@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './New.css'
 function Show(props) {
 	const id = props.match.params.id
 	const [noteDisplay, setNoteDisplay] = useState({
@@ -31,18 +32,20 @@ function Show(props) {
 		<div>
 			<form onSubmit={handleSubmit}>
 				<input
+				className='title'
 					type='text'
 					value={noteDisplay?.title}
 					name='title'
 					onChange={handleChange}
 				/>
-				<input
+				<textarea
+				className='content'
 					type='text'
 					value={noteDisplay?.content}
 					name='content'
 					onChange={handleChange}
 				/>
-				<input type='submit' value='Save' />
+				<input className='button' type='submit' value='Save' />
 			</form>
 		</div>
 	)

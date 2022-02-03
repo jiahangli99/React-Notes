@@ -1,6 +1,9 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import './New.css'
 
 function New(props) {
+	const history = useHistory()
 	const [note, setNote] = useState({
 		title: '',
 		content: '',
@@ -17,18 +20,21 @@ function New(props) {
 			title: '',
 			content: '',
 		})
+		history.push('/')
 	}
 	return (
 		<section>
 			<form onSubmit={handleSubmit}>
 				<input
+				className='title'
 					type='text'
 					value={note.title}
 					name='title'
 					placeholder='Title'
 					onChange={handleChange}
 				/>
-				<input
+				<textarea
+					className='content'
 					type='text'
 					value={note.content}
 					name='content'
@@ -36,7 +42,7 @@ function New(props) {
 					onChange={handleChange}
 				/>
 
-				<input type='submit' value='Create Note' />
+				<input className='button' type='submit' value='Create Note' />
 			</form>
 		</section>
 	)

@@ -1,0 +1,30 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    height:65vh;
+    width: 160vh;
+    font-size:15pt;
+}
+.title {
+ height: 10vh;
+ font-size:20pt;
+ text-align: center;
+}
+.button {
+    border-radius: 8px;
+    width: 20vh;
+    height: 5vh;
+    border: 2px solid #4CAF50;
+}
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
