@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import './New.css'
 
 function New(props) {
+	const history = useHistory()
 	const [note, setNote] = useState({
 		title: '',
 		content: '',
@@ -18,6 +20,7 @@ function New(props) {
 			title: '',
 			content: '',
 		})
+		history.push('/')
 	}
 	return (
 		<section>
