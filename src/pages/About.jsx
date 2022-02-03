@@ -67,55 +67,55 @@ const About = () => {
 			<span id='techheader'>Packages Used</span>
 			<ul id='packages'>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/dotenv'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/dotenv'>
 						dotenv
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/express'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/express'>
 						express
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/mongoose'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/mongoose'>
 						mongoose
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/morgan'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/morgan'>
 						morgan
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/react'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/react'>
 						react
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/react-dom'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/react-dom'>
 						react-dom
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/react-router'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/react-router'>
 						react-router
 					</a>
 				</li>
 				<li>
 					<a
 						target='_blank'
-						href='https://www.npmjs.com/package/react-router-dom'
+						rel="noreferrer" href='https://www.npmjs.com/package/react-router-dom'
 					>
 						react-router-dom@v5.3
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/react-scripts'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/react-scripts'>
 						react-scripts
 					</a>
 				</li>
 				<li>
-					<a target='_blank' href='https://www.npmjs.com/package/sass'>
+					<a target='_blank' rel="noreferrer" href='https://www.npmjs.com/package/sass'>
 						sass
 					</a>
 				</li>
