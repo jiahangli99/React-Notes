@@ -11,10 +11,18 @@
 	grid-area: 1 / 1 / 7 / 2;
 	background-color: #fb8464;
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column-reverse;
 	min-height: 100vh;
 	max-height: 100vh;
 	min-width: 15vw;
+	align-items: center;
+
+	img {
+		height: 15vh;
+		width: auto;
+		margin: 5px;
+	}
 }
 
 .Header {
@@ -39,7 +47,7 @@
 }
 
 button {
-	background-color: red;
+	background-color: #E1341E;
 }
 
 .NoteArea {
