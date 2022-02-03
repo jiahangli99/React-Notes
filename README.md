@@ -1,20 +1,17 @@
 # Reactive Notes - Client
 
-**Links:**
+#### Reactive Notes is a lightweight note keeping app.
 
--   [Click Here]() to see the deployed link
+![screenshot](https://i.imgur.com/Cfsc2Sa.png)
 
--   [Click Here](https://github.com/jiahangli99/express-notes) to see the backend
 
-**Contributors:**
+## Table of Contents
+* [Technologies Used](#technologiesused)
+* [Features](#features)
+* [Deployed App](#deployment)
 
--   [Abraham Li](https://github.com/jiahangli99)
--   [Chris Basham](https://github.com/berninup)
--   [Stephan Randle](https://github.com/stephansama)
 
-**Screenshots:**
-
-**Technologies Used:**
+## <a name='technologiesused'></a>Technologies Used
 
 -   [bootstrap](https://www.npmjs.com/package/bootstrap)
 -   [react](https://www.npmjs.com/package/react)
@@ -23,6 +20,37 @@
 -   [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 -   [react-scripts](https://www.npmjs.com/package/react-scripts)
 -   [sass](https://www.npmjs.com/package/sass)
+
+## <a name='features'></a>Features
+* Users can create and edit notes.
+
+## Wireframs
+
+### Main Page
+![wireframe main](https://i.imgur.com/JMcQ2jF.png)
+
+### Wireframe New page
+
+![wireframe new](https://i.imgur.com/Q18iEy1.png)
+
+
+## <a name="deployment"></a>Deployed Link
+
+-   [Click Here](https://reactive-note.netlify.app/) to see the deployed link
+
+-   [Click Here](https://github.com/jiahangli99/express-notes) to see the backend
+
+### Contributors:
+
+-   [Abraham Li](https://github.com/jiahangli99)
+-   [Chris Basham](https://github.com/berninup)
+-   [Stephan Randle](https://github.com/stephansama)
+
+
+
+
+
+
 
 <div>
     
