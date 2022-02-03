@@ -30,7 +30,16 @@ function Main() {
 		getNotes()
 	}
 
+	const deleteNote = async (id) => {
+		// make delete request to create Note
+		await fetch(URL + id, {
+			method: 'DELETE',
+		})
+		// update list of Note
+		getNotes()
+	}
 	const updateNotes = async (note, id) => {
+		
 		// make put request to create Note
 		await fetch(URL + id, {
 			method: 'PUT',
@@ -42,15 +51,7 @@ function Main() {
 		// update list of Note
 		getNotes()
 	}
-	const deleteNote = async (id) => {
-		// make delete request to create Note
-		await fetch(URL + id, {
-			method: 'DELETE',
-		})
-		// update list of Note
-		getNotes()
-	}
-
+	
 	useEffect(() => getNotes(), [])
 	return (
 		<main className='Main'>
@@ -70,7 +71,7 @@ function Main() {
 						<Show
 							notes={notes}
 							getNotes={getNotes}
-							updateNote={updateNotes}
+							updateNotes={updateNotes}
 							{...rp}
 						/>
 					)}

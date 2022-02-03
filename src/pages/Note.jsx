@@ -21,7 +21,7 @@ function Show(props) {
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		props.updateNote(noteDisplay)
+		props.updateNotes(noteDisplay, id)
 		props.history.push('/')
 	}
 
