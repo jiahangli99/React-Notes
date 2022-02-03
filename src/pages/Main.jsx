@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import NoteCard from '../components/NoteCard'
 
+import About from './About'
 import New from './New'
 import Show from './Note'
 
@@ -52,15 +53,17 @@ function Main() {
 
 	useEffect(() => getNotes(), [])
 	return (
-		<main>
+		<main className='Main'>
 			<Switch>
 				<Route exact path='/'>
 					<NoteCard notes={notes} deleteNote={deleteNote} />
 				</Route>
+				<Route exact path='/about'>
+					<About />
+				</Route>
 				<Route path='/new'>
 					<New notes={notes} createNote={createNote} />
 				</Route>
-
 				<Route
 					path='/:id'
 					render={(rp) => (
