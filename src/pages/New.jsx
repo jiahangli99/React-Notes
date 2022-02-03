@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './New.css'
 
 function New(props) {
 	const [note, setNote] = useState({
@@ -22,13 +23,15 @@ function New(props) {
 		<section>
 			<form onSubmit={handleSubmit}>
 				<input
+				className='title'
 					type='text'
 					value={note.title}
 					name='title'
 					placeholder='Title'
 					onChange={handleChange}
 				/>
-				<input
+				<textarea
+					className='content'
 					type='text'
 					value={note.content}
 					name='content'
@@ -36,7 +39,7 @@ function New(props) {
 					onChange={handleChange}
 				/>
 
-				<input type='submit' value='Create Note' />
+				<input className='button' type='submit' value='Create Note' />
 			</form>
 		</section>
 	)
