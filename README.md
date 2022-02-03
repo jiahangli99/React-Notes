@@ -1,10 +1,10 @@
-# Reactive Chat App - Client
+# Reactive Notes - Client
 
 **Links:**
 
 -   [Click Here]() to see the deployed link
 
--   [Click Here](https://github.com/stephansama/reactive-backend) to see the backend
+-   [Click Here](https://github.com/jiahangli99/express-notes) to see the backend
 
 **Contributors:**
 
