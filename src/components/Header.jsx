@@ -5,7 +5,7 @@ function Header() {
   return (
   <div className="Header">
       <Link to="/" style={{ textDecoration: 'none', color: "#E1341E" }}>
-      <h1>Reactive Chat</h1>
+      <h1>Reactive Notes</h1>
 
       </Link>
     <NewButton />  
